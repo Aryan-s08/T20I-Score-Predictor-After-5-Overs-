@@ -84,6 +84,9 @@ if st.button("Predict"):
             st.dataframe(input_df.T[input_df.iloc[0] != 0])
 
         # Prediction
+        st.subheader("🧪 Debug: Model Input")
+        st.dataframe(input_df.T)
+
         pred = int(model.predict(input_df)[0])
 
         st.success(f"🏏 Predicted Final Score: **{pred}**")
